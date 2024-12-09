@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Productos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Gestor de Productos</h1>
+
+    <!-- Formulario para agregar productos -->
+    <h2>Agregar Producto</h2>
+    <form id="productForm">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <label for="precio">Precio:</label>
+        <input type="number" id="precio" name="precio" required>
+        <label for="categoria">Categoría:</label>
+        <input type="text" id="categoria" name="categoria" required>
+        <button type="submit" class="btn btn-add">Agregar</button>
+    </form>
+
+    <!-- Formulario para editar productos -->
+    <h2>Actualizar Producto</h2>
+    <form id="updateForm" style="display: none;">
+        <label for="updateNombre">Nombre:</label>
+        <input type="text" id="updateNombre" name="updateNombre" required>
+        <label for="updatePrecio">Precio:</label>
+        <input type="number" id="updatePrecio" name="updatePrecio" required>
+        <label for="updateCategoria">Categoría:</label>
+        <input type="text" id="updateCategoria" name="updateCategoria" required>
+        <button type="submit" class="btn btn-update">Actualizar</button>
+        <button type="button" class="btn btn-cancel" onclick="cancelarActualizacion()">Cancelar</button>
+    </form>
+
+    <!-- Tabla para mostrar productos -->
+    <h2>Lista de Productos</h2>
+    <table id="productTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Categoría</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Filas generadas dinámicamente -->
+        </tbody>
+    </table>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
